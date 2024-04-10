@@ -48,7 +48,7 @@
     <thead>
       <tr>
         <th>S.No</th>
-        <th>Name</th>
+       
         <th>Desciption</th>
       </tr>
     </thead>
