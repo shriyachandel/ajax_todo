@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db_name ='';
+$db_name = 'ajax_todo';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
