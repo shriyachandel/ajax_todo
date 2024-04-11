@@ -1,6 +1,5 @@
 <?php include('header.php') ?>
 
-<body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
   <a class="navbar-brand" href="#">
