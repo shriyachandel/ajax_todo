@@ -27,9 +27,9 @@
     <div class="col-lg-12">
       <form class="form" action="/action_page.php">
         <label for="name" class="mb-2 mr-sm-2">Name:</label>
-        <input type="text" class="form-control mb-2 mr-sm-2" id="name" placeholder="Enter name" name="name">
+        <input type="text" class="form-control mb-2 mr-sm-2" id="name" placeholder="Enter name" name="Name">
         <label for="description" class="mb-2 mr-sm-2">Description:</label>
-        <input type="text" class="form-control mb-2 mr-sm-2" id="description" placeholder="Enter description" name="description">
+        <input type="text" class="form-control mb-2 mr-sm-2" id="description" placeholder="Enter description" name="Description">
         <button type="submit" class="btn btn-primary mb-2">Add Item</button>
       </form>
     </div>
