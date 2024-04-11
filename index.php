@@ -57,6 +57,7 @@
   $('#add_item').on('click',function(){
     var form_inputs = ['#name', '#description'];
     var formData = new FormData(jQuery("#todo_form")[0]);
+    console.log(formData);
   });
   
 </script>
