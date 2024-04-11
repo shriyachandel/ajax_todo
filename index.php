@@ -54,7 +54,8 @@
   <div>
 </div>
 <script>
-  alert('hello');
+
+  var form_inputs = ['#cus_full_name', '#cus_email', '#cus_address', '#phone_no'];
 </script>
 
 <?php include('footer.php'); ?> 
