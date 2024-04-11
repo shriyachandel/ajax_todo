@@ -25,7 +25,7 @@
 <div>
   <div class="row">
     <div class="col-lg-12">
-      <form class="form" action="/action_page.php" method="post">
+      <form class="form"id="todo_form"  method="post">
         <label for="name" class="mb-2 mr-sm-2">Name:</label>
         <input type="text" class="form-control mb-2 mr-sm-2" id="name" placeholder="Enter name" name="Name">
         <label for="description" class="mb-2 mr-sm-2">Description:</label>
@@ -56,6 +56,7 @@
 <script>
 
   var form_inputs = ['#cus_full_name', '#cus_email', '#cus_address', '#phone_no'];
+  var formData = new FormData(jQuery("#get_estimate_form")[0]);
 </script>
 
 <?php include('footer.php'); ?> 
