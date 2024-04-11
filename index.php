@@ -53,6 +53,8 @@
     </div>
   <div>
 </div>
-
+<script>
+  alert('hello');
+</script>
 
 <?php include('footer.php'); ?> 
