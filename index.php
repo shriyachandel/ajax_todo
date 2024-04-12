@@ -59,16 +59,41 @@
   <div>
 </div>
 <script>
-  $(document).ready(function() {
-  $('#add_item').on('click', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-    var name = $('#name').val();
-    var description = $('#description').val();
+  $('#add_item').on('click',function(){
     
-    console.log(name + ' ' + description); // Log the values to the console
-  });
-});
+    var form_inputs = ['#name', '#description'];
+    var empty_fields = [];
+    // Remove previous red border
+    $(form_inputs.join(', ')).removeClass('error-border');
+    $.each(form_inputs, function (index, value) {
+        if (!$(value).val()) {
+            $('.form_error').show();
+          
+            setTimeout(function () {
+                $('.form_error').hide();
+               $(empty_fields).each(function (index, value) {
+        $(value).removeClass('error-border').focus();
+    });
+            }, 4000);
 
+            // Collect empty fields
+            empty_fields.push(value);
+
+            has_error = true;
+        }
+    });
+
+    // Add red border and focus on all empty fields
+    $(empty_fields).each(function (index, value) {
+        $(value).addClass('error-border').focus();
+    });
+
+    if (has_error) {
+        return; // Stop further processing if there is an error
+    }
+    var formData = new FormData(jQuery("#todo_form")[0]);
+    console.log(formData);
+  });
   
 </script>
 
