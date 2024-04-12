@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
   <a class="navbar-brand" href="#">
-    <img src="bird.jpg" alt="logo" style="width:40px;">
+    <!-- <img src="bird.jpg" alt="logo" style="width:40px;"> -->
   </a>
   
   <!-- Links -->
@@ -25,6 +25,11 @@
 <div>
   <div class="row">
     <div class="col-lg-12">
+    <div class="form_error" style="display:none;">
+                     
+                     <span>Please make sure all fields are filled in.</span>
+                  
+               </div>
       <form class="form" id="todo_form"  method="post">
         <label for="name" class="mb-2 mr-sm-2">Name:</label>
         <input type="text" class="form-control mb-2 mr-sm-2" id="name" placeholder="Enter name" name="Name">
@@ -55,9 +60,10 @@
 </div>
 <script>
   $('#add_item').on('click',function(){
-    var form_inputs = ['#name', '#description'];
-    var formData = new FormData(jQuery("#todo_form")[0]);
-    console.log(formData);
+    var name = $('#name').val();
+    var description = $('#description').val();
+    
+    console.log(name);
   });
   
 </script>
