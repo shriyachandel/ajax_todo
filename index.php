@@ -63,7 +63,7 @@
     var name = $('#name').val();
     var description = $('#description').val();
     
-    console.log(name);
+    console.log(name + description);
   });
   
 </script>
