@@ -59,12 +59,16 @@
   <div>
 </div>
 <script>
-  $('#add_item').on('click',function(){
+  $(document).ready(function() {
+  $('#add_item').on('click', function(event) {
+    event.preventDefault(); // Prevent the default form submission
     var name = $('#name').val();
     var description = $('#description').val();
     
-    console.log(name + description);
+    console.log(name + ' ' + description); // Log the values to the console
   });
+});
+
   
 </script>
 
