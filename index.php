@@ -60,8 +60,8 @@
 </div>
 <script>
   $(document).ready(function() {
-  $('#add_item').on('click',function(){
-    
+    $('#add_item').on('click', function(event) {
+      event.preventDefault(); // Prevent the default form submission
     var form_inputs = ['#name', '#description'];
     var empty_fields = [];
     // Remove previous red border
