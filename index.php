@@ -73,9 +73,9 @@
           
             setTimeout(function () {
                 $('.form_error').hide();
-               $(empty_fields).each(function (index, value) {
-        $(value).removeClass('error-border').focus();
-    });
+                $(empty_fields).each(function (index, value) {
+                $(value).removeClass('error-border').focus();
+                });
             }, 4000);
 
             // Collect empty fields
