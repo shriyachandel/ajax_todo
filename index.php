@@ -4,7 +4,6 @@
   <!-- Brand/logo -->
   <a class="navbar-brand" href="#">
     <!-- <img src="bird.jpg" alt="logo" style="width:40px;"> -->
-    <h3>Logo</h3>
   </a>
   
   <!-- Links -->
@@ -15,7 +14,9 @@
     <li class="nav-item">
       <a class="nav-link" href="#">About</a>
     </li>
-   
+    <li class="nav-item">
+      <a class="nav-link" href="#">Contact</a>
+    </li>
   </ul>
 </nav>
 
