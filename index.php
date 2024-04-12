@@ -1,4 +1,4 @@
-
+<?php include('header.php') ?>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
