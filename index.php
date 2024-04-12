@@ -94,8 +94,6 @@
         return; // Stop further processing if there is an error
     }
     var formData = new FormData(jQuery("#todo_form")[0]);
-    console.log(formData);
-  });
 });
 </script>
 
