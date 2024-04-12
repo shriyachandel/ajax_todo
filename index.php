@@ -64,6 +64,7 @@
       event.preventDefault(); // Prevent the default form submission
     var form_inputs = ['#name', '#description'];
     var empty_fields = [];
+    var has_error = false; // Initialize has_error variable
     // Remove previous red border
     $(form_inputs.join(', ')).removeClass('error-border');
     $.each(form_inputs, function (index, value) {
