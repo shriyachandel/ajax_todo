@@ -4,7 +4,7 @@
   <!-- Brand/logo -->
   <a class="navbar-brand" href="#">
     <!-- <img src="bird.jpg" alt="logo" style="width:40px;"> -->
-    <!-- <h3>Logo</h3> -->
+    <h3>Logo</h3>
   </a>
   
   <!-- Links -->
