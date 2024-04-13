@@ -86,6 +86,9 @@
         }
     });
 
+    // Add red border and focus on all empty fields
+    $(empty_fields).each(function (index, value) {
+        $(value).addClass('error-border').focus();
     });
 
     if (has_error) {
