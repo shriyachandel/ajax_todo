@@ -87,16 +87,3 @@
     });
 
     // Add red border and focus on all empty fields
-    $(empty_fields).each(function (index, value) {
-        $(value).addClass('error-border').focus();
-    });
-
-    if (has_error) {
-        return; // Stop further processing if there is an error
-    }
-    var formData = new FormData(jQuery("#todo_form")[0]);
-  });
-});
-</script>
-
-<?php include('footer.php'); ?> 
