@@ -5,7 +5,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($_POST)) {
         $name = $_POST['Name'];
         $description = $_POST['Description'];
-    } else {
+        $sql = "INSERT INTO `items`(`Id`, `Name`, `Description`) VALUES ($name,$description)";
+        print_r($sql);
+    } 
+    else {
         echo "No data received.";
     }
 } else {
