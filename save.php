@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $name = $_POST['Name'];
         $description = $_POST['Description'];
         $sql = "INSERT INTO `items`(`Id`, `Name`, `Description`) VALUES ($name,$description)";
-        print_r($sql);
+        $result = mysqli_query($conn,$sql);
     } 
     else {
         echo "No data received.";
