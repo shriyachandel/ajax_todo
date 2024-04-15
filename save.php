@@ -1,3 +1,4 @@
+<?php include('db/db.php') ?>
 <?php
 // Check if any data was sent via POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
