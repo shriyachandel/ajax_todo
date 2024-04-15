@@ -3,8 +3,8 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Check if any data is set in the $_POST array
     if (!empty($_POST)) {
-        // If there is data, print all of it
-        print_r($_POST);
+        $name = $_POST['Name'];
+        $description = $_POST['Description'];
     } else {
         echo "No data received.";
     }
