@@ -27,10 +27,11 @@
   <div class="row">
     <div class="col-lg-12">
     <div class="form_error" style="display:none;">
-                     
-                     <span>Please make sure all fields are filled in.</span>
-                  
-               </div>
+         <span>Please make sure all fields are filled in.</span>
+    </div>
+    <div class="alert alert-success alert-dismissible" id="success" style="display:none;">
+	  <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+	</div>
       <form class="form" id="todo_form"  method="post">
         <label for="name" class="mb-2 mr-sm-2">Name:</label>
         <input type="text" class="form-control mb-2 mr-sm-2" id="name" placeholder="Enter name" name="Name">
@@ -105,7 +106,7 @@
         success: function (data) {
           console.log(data);
          if(data.statusCode == 200){
-          alert("sucessfully saved");
+          $("#success").show()
          }else{
           alert("something went wrong");
          }
