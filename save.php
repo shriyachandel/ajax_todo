@@ -8,11 +8,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $description = $_POST['Description'];
         $sql = "INSERT INTO items(Name,Description) VALUES ('$name','$description')";
         $result = mysqli_query($conn,$sql);
+        if($result){
+            echo json_encode(array("statusCode"=>200));
+        }else{
+            echo json_encode(array("statusCode"=>201));
+        }
     } 
     else {
-        echo json_encode(array("statusCode"=>200));
+        echo "No data received.";
     }
 } else {
-    echo json_encode(array("statusCode"=>201));
+    echo "This endpoint only accepts POST requests.";
 }
 ?>
