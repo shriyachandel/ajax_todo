@@ -106,7 +106,8 @@
         success: function (data) {
           console.log(data);
          if(data.statusCode == 200){
-          $("#success").show()
+          $("#success").html('Data added successfully !');
+          $("#sucsess").show();
          }else{
           alert("something went wrong");
          }
