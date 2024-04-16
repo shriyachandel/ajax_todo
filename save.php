@@ -10,9 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = mysqli_query($conn,$sql);
     } 
     else {
-        echo "1";
+        echo json_encode(array("statusCode"=>200));
     }
 } else {
-    echo "0";
+    echo json_encode(array("statusCode"=>201));
 }
 ?>
