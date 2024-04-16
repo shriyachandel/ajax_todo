@@ -104,7 +104,11 @@
         dataType: 'json',
         success: function (data) {
           console.log(data);
-         
+         if(data.statusCode == 200){
+          alert("sucessfully saved");
+         }else{
+          alert("something went wrong");
+         }
         }
         
     });
