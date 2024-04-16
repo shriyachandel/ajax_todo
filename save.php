@@ -10,9 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = mysqli_query($conn,$sql);
     } 
     else {
-        echo "No data received.";
+        echo "1";
     }
 } else {
-    echo "This endpoint only accepts POST requests.";
+    echo "0";
 }
 ?>
