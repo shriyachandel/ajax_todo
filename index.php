@@ -108,6 +108,9 @@
          if(data.statusCode == 200){
           $("#success").html('Data added successfully !');
           $("#sucsess").show();
+          setTimeout(() => {
+            $("#sucsess").hide();
+          }, 4000);
          }else{
           alert("something went wrong");
          }
