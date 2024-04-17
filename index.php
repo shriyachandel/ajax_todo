@@ -1,23 +1,5 @@
 <?php include('header.php') ?>
-<?php
-$sql = "SELECT * FROM items";
-$result = mysqli_query($conn, $sql);
-$num_row = mysqli_num_rows($result);
-if($num_row > 0){
-  while($row = mysqli_fetch_assoc($num_row)) {
-    ?>
-    <tr>
-			<td><?php echo $row['id']; ?></td>
-			<td><?php echo $row['Name']; ?></td>
-			<td><?php $row['Description']; ?></td>
-		</tr>
-    <?php
-  }
 
-}else{
-  echo 'No Record';
-}
-?>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
   <a class="navbar-brand" href="#">
@@ -67,12 +49,8 @@ if($num_row > 0){
         <th>Desciption</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Doe</td>
-        <td>This is description text</td>
-      </tr>
+    <tbody id="table_data">
+      
     </tbody>
   </table>
     </div>

@@ -20,4 +20,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo "This endpoint only accepts POST requests.";
 }
+$sql = "SELECT * FROM items";
+$result = mysqli_query($conn, $sql);
+$num_row = mysqli_num_rows($result);
+if($num_row > 0){
+  while($row = mysqli_fetch_assoc($num_row)) {
+    ?>
+    <tr>
+			<td><?php echo $row['id']; ?></td>
+			<td><?php echo $row['Name']; ?></td>
+			<td><?php $row['Description']; ?></td>
+		</tr>
+    <?php
+  }
+
+}else{
+  echo 'No Record';
+}
 ?>
