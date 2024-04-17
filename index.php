@@ -102,8 +102,8 @@
         success: function (data) {
           
           var parsedData = JSON.parse(data); 
-          console.log(parsedData);
-         if(data.statusCode == 200){
+          console.log(data); // Ensure that the response is printed in the console
+        if(data.statusCode == 200){
           console.log(data.statusCode+'dhghs');
           $("#success").html('Data added successfully !');
           $("#sucsess").show();
