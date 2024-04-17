@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 while($row = mysqli_fetch_assoc($selectResult)) {
                     ?>
                     <tr>
-                        <td><?php echo $row['id']; ?></td>
+                        <td><?php echo $row['Id']; ?></td>
                         <td><?php echo $row['Name']; ?></td>
                         <td><?php echo $row['Description']; ?></td> <!-- Added echo here -->
                     </tr>
