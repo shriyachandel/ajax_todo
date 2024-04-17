@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             else {
                 echo 'No Record';
             }
-            echo json_encode(array("statusCode"=>200, "data"=>$num_rows)); // Returning number of rows in response
+            echo json_encode(array("statusCode"=>200)); // Returning number of rows in response
         } else {
             echo json_encode(array("statusCode"=>201, "error"=>mysqli_error($conn))); // Return error if insertion failed
         }
