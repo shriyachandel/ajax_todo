@@ -100,14 +100,12 @@
         processData: false,
         dataType: 'json',
         success: function (data) {
-          console.log(data); // Ensure that the response is printed in the console
         if(data.statusCode == 200){
-            console.log(data.statusCode + ' Data added successfully');
             $("#success").html('Data added successfully !');
             $("#success").show(); // Corrected spelling mistake here
             setTimeout(() => {
                 $("#success").hide(); // Corrected spelling mistake here
-            }, 4000);
+            }, 8000);
         } else {
             alert("Something went wrong");
         }
