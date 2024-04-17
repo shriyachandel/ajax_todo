@@ -102,6 +102,7 @@
         success: function (data) {
           console.log(data);
          if(data.statusCode == 200){
+          console.log(data.statusCode+'dhghs');
           $("#success").html('Data added successfully !');
           $("#sucsess").show();
           setTimeout(() => {
