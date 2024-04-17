@@ -2,11 +2,20 @@
 <?php
 $sql = "SELECT * FROM items";
 $result = mysqli_query($conn, $sql);
-$row = mysqli_num_rows($result);
-if($row>0){
-  echo $row;
+$num_row = mysqli_num_rows($result);
+if($num_row > 0){
+  while($row = mysqli_fetch_assoc($num_row)) {
+    ?>
+    <tr>
+			<td><?php echo $row['id']; ?></td>
+			<td><?php echo $row['Name']; ?></td>
+			<td><?php $row['Description']; ?></td>
+		</tr>
+    <?php
+  }
+
 }else{
-  echo $row.'zero';
+  echo 'No Record';
 }
 ?>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
