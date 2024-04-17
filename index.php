@@ -100,7 +100,9 @@
         processData: false,
         dataType: 'json',
         success: function (data) {
-          console.log(data);
+          
+          var parsedData = JSON.parse(data); 
+          console.log(parsedData);
          if(data.statusCode == 200){
           console.log(data.statusCode+'dhghs');
           $("#success").html('Data added successfully !');
