@@ -1,7 +1,13 @@
 <?php include('header.php') ?>
 <?php
 $sql = "SELECT * FROM items";
-
+$result = mysqli_query($conn, $sql);
+$row = mysqli_num_rows($result);
+if($row>0){
+  echo $row;
+}else{
+  echo $row.'zero';
+}
 ?>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
