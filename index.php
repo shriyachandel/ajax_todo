@@ -1,5 +1,8 @@
 <?php include('header.php') ?>
+<?php
+$sql = "SELECT * FROM items";
 
+?>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
   <a class="navbar-brand" href="#">
