@@ -1,42 +1,29 @@
-<?php include('db/db.php') ?>
+<?php include('db/db.php');
 
-<?php
-// Check if any data was sent via POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Check if any data is set in the $_POST array
     if (!empty($_POST)) {
         $name = $_POST['Name'];
         $description = $_POST['Description'];
-        $sql = "INSERT INTO items(Name,Description) VALUES ('$name','$description')";
-        $result = mysqli_query($conn,$sql);
-        if($result){
-            // Fetch the inserted data
+        $sql = "INSERT INTO items(Name, Description) VALUES (?, ?)";
+        $stmt = mysqli_prepare($conn, $sql);
+        mysqli_stmt_bind_param($stmt, "ss", $name, $description);
+        $result = mysqli_stmt_execute($stmt);
+
+        if ($result) {
             $selectSql = "SELECT * FROM items";
             $selectResult = mysqli_query($conn, $selectSql);
-            $num_rows = mysqli_num_rows($selectResult);
-            if($num_rows > 0){
-                while($row = mysqli_fetch_assoc($selectResult)) {
-                    ?>
-                    <tr>
-                        <td><?php echo $row['Id']; ?></td>
-                        <td><?php echo $row['Name']; ?></td>
-                        <td><?php echo $row['Description']; ?></td> <!-- Added echo here -->
-                    </tr>
-                    <?php
-                }
+            $rows = [];
+            while ($row = mysqli_fetch_assoc($selectResult)) {
+                $rows[] = $row;
             }
-            else {
-                echo 'No Record';
-            }
-            echo json_encode(array("statusCode"=>200)); // Returning number of rows in response
+            echo json_encode(array("statusCode" => 200, "data" => $rows));
         } else {
-            echo json_encode(array("statusCode"=>201, "error"=>mysqli_error($conn))); // Return error if insertion failed
+            echo json_encode(array("statusCode" => 201, "error" => mysqli_error($conn)));
         }
-    } 
-    else {
-        echo "No data received.";
+    } else {
+        echo json_encode(array("statusCode" => 400, "error" => "No data received."));
     }
 } else {
-    echo "This endpoint only accepts POST requests.";
+    echo json_encode(array("statusCode" => 405, "error" => "This endpoint only accepts POST requests."));
 }
 ?>
