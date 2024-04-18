@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 while($row = mysqli_fetch_assoc($selectResult)) {
                     
               $table_Data = '<tr>
-                    <td>' . $row['id'] . '</td>
+                    <td>' . $row['Id'] . '</td>
                     <td>' . $row['Name'] . '</td>
                     <td>' . $row['Description'] . '</td>
                   </tr>';
