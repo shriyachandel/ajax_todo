@@ -54,7 +54,19 @@ $num_row = mysqli_num_rows($result);
       </tr>
     </thead>
     <tbody id="table_data">
-      
+      <?php 
+      if($num_row > 0){
+        while($row = mysqli_fetch_assoc($num_row)) {
+          ?>
+          <tr>
+            <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['Name']; ?></td>
+            <td><?php $row['Description']; ?></td>
+          </tr>
+          <?php
+        }
+      }
+      ?>
     </tbody>
   </table>
     </div>
