@@ -54,8 +54,9 @@
       $sql = "SELECT * FROM items";
       
       $result = mysqli_query($conn, $sql);
-      print_r($result);die();
+    
       $num_row = mysqli_num_rows($result);
+      print_r($num_row);die();
       if($num_row > 0){
         while($row = mysqli_fetch_assoc($num_row)) {
           ?>
