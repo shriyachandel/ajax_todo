@@ -51,6 +51,9 @@
     </thead>
     <tbody id="table_data">
       <?php 
+      $sql = "SELECT * FROM items";
+      $result = mysqli_query($conn, $sql);
+      $num_row = mysqli_num_rows($result);
       if($num_row > 0){
         while($row = mysqli_fetch_assoc($num_row)) {
           ?>
