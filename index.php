@@ -102,6 +102,7 @@
         success: function (data) {
         var tableData = data['table-data'];
         if(data.statusCode == 200){
+          $('#table_data').html(tableData);
             $("#success").html('Data added successfully !');
             $("#success").show(); // Corrected spelling mistake here
             setTimeout(() => {
