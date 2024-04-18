@@ -17,11 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if($num_rows > 0){
                 while($row = mysqli_fetch_assoc($selectResult)) {
                     
-            $table_Data =.'<tr>
-                        <td>'.echo $row['id']; .'</td>
-                        <td>'.echo $row['Name'];.'</td>
-                        <td>'.echo $row['Description'];.'</td>
-                    </tr>';
+              $table_Data = '<tr>
+                    <td>' . $row['id'] . '</td>
+                    <td>' . $row['Name'] . '</td>
+                    <td>' . $row['Description'] . '</td>
+                  </tr>';
+    
                 }
             }
             else {
