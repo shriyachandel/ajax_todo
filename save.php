@@ -16,13 +16,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $num_rows = mysqli_num_rows($selectResult);
             if($num_rows > 0){
                 while($row = mysqli_fetch_assoc($selectResult)) {
-                    ?>
-                    <tr>
-                        <td><?php echo $row['id']; ?></td>
-                        <td><?php echo $row['Name']; ?></td>
-                        <td><?php echo $row['Description']; ?></td> <!-- Added echo here -->
-                    </tr>
-                    <?php
+                    
+            $table_Data ='<tr>
+                        <td>'.echo $row['id']; .'</td>
+                        <td>'.echo $row['Name'];.'</td>
+                        <td>'.echo $row['Description'];.'</td>
+                    </tr>';
                 }
             }
             else {
