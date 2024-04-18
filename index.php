@@ -50,17 +50,18 @@
       </tr>
     </thead>
     <tbody id="table_data">
-      <?php 
+    <?php 
       $sql = "SELECT * FROM items";
+      echo $sql;die();
       $result = mysqli_query($conn, $sql);
       $num_row = mysqli_num_rows($result);
       if($num_row > 0){
         while($row = mysqli_fetch_assoc($num_row)) {
           ?>
           <tr>
-            <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['Id']; ?></td>
             <td><?php echo $row['Name']; ?></td>
-            <td><?php $row['Description']; ?></td>
+            <td><?php echo $row['Description']; ?></td>
           </tr>
           <?php
         }
