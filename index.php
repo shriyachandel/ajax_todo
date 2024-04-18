@@ -58,8 +58,8 @@
       $num_row = mysqli_num_rows($result);
      
       if($num_row > 0){
-        while($row = mysqli_fetch_assoc($num_row)) {
-          print_r($row);die();
+        while($row = mysqli_fetch_assoc($result)) {
+         
           ?>
           <tr>
             <td><?php echo $row['Id']; ?></td>
@@ -121,7 +121,7 @@
         success: function (data) {
         var tableData = data['table-data'];
         if(data.statusCode == 200){
-          $('#table_data').html(tableData);
+          $('#table_data').append(tableData);
             $("#success").html('Data added successfully !');
             $("#success").show(); // Corrected spelling mistake here
             setTimeout(() => {
