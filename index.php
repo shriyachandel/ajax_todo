@@ -56,9 +56,10 @@
       $result = mysqli_query($conn, $sql);
     
       $num_row = mysqli_num_rows($result);
-      print_r($num_row);die();
+     
       if($num_row > 0){
         while($row = mysqli_fetch_assoc($num_row)) {
+          print_r($row);die();
           ?>
           <tr>
             <td><?php echo $row['Id']; ?></td>
