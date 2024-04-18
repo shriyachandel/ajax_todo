@@ -1,5 +1,9 @@
 <?php include('header.php') ?>
-
+<?php 
+$sql = "SELECT * FROM items";
+$result = mysqli_query($conn, $sql);
+$num_row = mysqli_num_rows($result);
+?>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
   <a class="navbar-brand" href="#">
