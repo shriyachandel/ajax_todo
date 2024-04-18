@@ -100,6 +100,7 @@
         processData: false,
         dataType: 'json',
         success: function (data) {
+          console.log(data.table-data);
         if(data.statusCode == 200){
             $("#success").html('Data added successfully !');
             $("#success").show(); // Corrected spelling mistake here
