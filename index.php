@@ -47,7 +47,7 @@
         <th>S.No</th>
         <th>Name</th>
         <th>Desciption</th>
-        <th colspan="2">Update</th>
+        <th colspan="2" class="text-center">Update</th>
         
       </tr>
     </thead>
