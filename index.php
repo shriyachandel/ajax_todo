@@ -68,7 +68,7 @@
             <td><?php echo $row['Name']; ?></td>
             <td><?php echo $row['Description']; ?></td>
             <td><button type="submit" class="btn btn-primary mb-2" id="edit_item">Edit Item</button></td>
-            <td><button type="submit" class="btn btn-primary mb-2" id="remove_item">Delete</button></td>
+            <td><button type="submit" class="btn btn-primary mb-2" id="remove_item"><i class="material-icons">&#xe872;</i></button></td>
           </tr>
           <?php
         }
