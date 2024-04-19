@@ -123,6 +123,7 @@
         if(data.statusCode == 200){
           $('#table_data').append(tableData);
             $("#success").html('Data added successfully !');
+            $("#name, #description").empty();
             $("#success").show(); // Corrected spelling mistake here
             setTimeout(() => {
                 $("#success").hide(); // Corrected spelling mistake here
