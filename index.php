@@ -47,6 +47,8 @@
         <th>S.No</th>
         <th>Name</th>
         <th>Desciption</th>
+        <th>Edit</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody id="table_data">
@@ -65,6 +67,8 @@
             <td><?php echo $row['Id']; ?></td>
             <td><?php echo $row['Name']; ?></td>
             <td><?php echo $row['Description']; ?></td>
+            <td><button type="submit" class="btn btn-primary mb-2" id="edit_item">Edit Item</button></td>
+            <td><button type="submit" class="btn btn-primary mb-2" id="remove_item">Delete</button></td>
           </tr>
           <?php
         }
@@ -127,7 +131,7 @@
             $("#success").show(); // Corrected spelling mistake here
             setTimeout(() => {
                 $("#success").hide(); // Corrected spelling mistake here
-            }, 8000);
+            }, 5000);
         } else {
             alert("Something went wrong");
         }
