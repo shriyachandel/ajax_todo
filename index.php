@@ -41,13 +41,13 @@
       </form>
     </div>
     <div class="col-lg-12">
-    <table class="table table-dark table-striped">
+    <table class="table table-dark table-striped text-center">
     <thead>
       <tr>
         <th>S.No</th>
         <th>Name</th>
         <th>Desciption</th>
-        <th colspan="2" class="text-center">Update</th>
+        <th>Update</th>
         
       </tr>
     </thead>
