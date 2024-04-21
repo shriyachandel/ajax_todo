@@ -26,19 +26,19 @@
 <div>
   <div class="row">
     <div class="col-lg-12">
-    <div class="form_error" style="display:none;">
-         <span>Please make sure all fields are filled in.</span>
-    </div>
-    <div class="alert alert-success alert-dismissible" id="success" style="display:none;">
-	  <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-	</div>
-      <form class="form" id="todo_form"  method="post">
-        <label for="name" class="mb-2 mr-sm-2">Name:</label>
-        <input type="text" class="form-control mb-2 mr-sm-2" id="name" placeholder="Enter name" name="Name">
-        <label for="description" class="mb-2 mr-sm-2">Description:</label>
-        <input type="text" class="form-control mb-2 mr-sm-2" id="description" placeholder="Enter description" name="Description">
-        <button type="submit" class="btn btn-primary mb-2" id="add_item">Add Item</button>
-      </form>
+          <div class="form_error" style="display:none;">
+              <span>Please make sure all fields are filled in.</span>
+          </div>
+          <div class="alert alert-success alert-dismissible" id="success" style="display:none;">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+          </div>
+            <form class="form" id="todo_form"  method="post">
+              <label for="name" class="mb-2 mr-sm-2">Name:</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="name" placeholder="Enter name" name="Name">
+              <label for="description" class="mb-2 mr-sm-2">Description:</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="description" placeholder="Enter description" name="Description">
+              <button type="submit" class="btn btn-primary mb-2" id="add_item">Add Item</button>
+            </form>
     </div>
     <div class="col-lg-12">
     <table class="table table-dark table-striped text-center">
@@ -82,13 +82,24 @@
 </div>
 <!-- The Modal -->
 <div id="myModal" class="modal">
-
   <!-- Modal content -->
+  <div class="container"> 
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="text-center modal-title text-danger">Update Data</h3>
+          <form class="form" id="todo_form"  method="post">
+              <label for="name" class="mb-2 mr-sm-2">Name:</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="name" placeholder="Enter name" name="Name">
+              <label for="description" class="mb-2 mr-sm-2">Description:</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="description" placeholder="Enter description" name="Description">
+              <button type="submit" class="btn btn-primary mb-2" id="add_item">Add Item</button>
+            </form>
+        </div>
+      </div>
   </div>
-
+    </div>
 </div>
 <script>
 // Get the modal
