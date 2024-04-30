@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             }
             else {
-                echo 'No Record';
+                echo 'No Record Found';
             }
             echo json_encode(array("statusCode"=>200, "table-data"=>$table_Data)); // Returning number of rows in response
         } else {
